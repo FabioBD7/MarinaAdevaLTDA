@@ -1,0 +1,9 @@
+primeiro clonar a pasta do github com o comando   :
+git clone https://github.com/FabioBD7/MarinaAdevaLTDA.git 
+ entrar na pasta criada.
+ cd MarinaAdevaLTDA
+
+Apos criar ou editar algum arquivo ou pasta adicionar a alteração com o comando:
+git add {nome do arquivo ou pasta }
+
+ 

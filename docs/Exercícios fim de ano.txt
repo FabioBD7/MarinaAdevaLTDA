@@ -1,0 +1,6 @@
+3.       Marina (Fábio, Flávio, Jéssica):
+A)      Eu como secretário da marina quero visualizar todo o catálogo de barcos estacionados com seus históricos, incluindo manutenções, datas que saíram, dados do modelo e do proprietário;
+B)      Eu como prático da marina quero lançar check-lists feitos antes de disponibilizar o barco para o proprietário, incluindo quites de segurança, níveis do combustível e dados dos passageiros que embarcarem;
+C)      Eu como mecânico de barcos quero cadastrar manutenções feitas em cada barco incluindo limpezas, preventivas e reparos e disponibilizar as faturas dos serviços;
+4.       Eu como cliente da marina quero visualizar todo o histórico do meu barco incluindo manutenções e saídas para a água, gerenciar minhas faturas e informar datas que quero retirar o barco notificando secretaria e manutenção para o prepararem para mim.
+
