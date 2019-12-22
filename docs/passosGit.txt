@@ -7,3 +7,26 @@ Apos criar ou editar algum arquivo ou pasta adicionar a alteração com o comand
 git add {nome do arquivo ou pasta }
 
  
+ efetuar um comit do que foi feito com o comando:
+	$ git commit -m "texto sobre o comit"
+	
+	###
+	ao realizar o comit pela primeira vez recebi mensagens 
+	solicitando que colocasse  e-mail e nome com os respectivos comandos:
+
+git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+  
+	###
+	
+	
+
+Subir as alterações com o comando:
+$ git push 
+###
+nesse momento é pedido suas credenciais do githubprimeiro pressionei esc para sair de uma tela que não entendo 
+depois nome de usuário 
+en seguida senha após  uma mensagem que referencia o ssh
+prontjo !
+###
+
