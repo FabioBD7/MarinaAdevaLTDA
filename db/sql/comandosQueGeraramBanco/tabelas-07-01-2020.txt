@@ -1,0 +1,15 @@
+MariaDB [marina]> show tables;
++------------------+
+| Tables_in_marina |
++------------------+
+| embarcacao       |
+| manutencao       |
+| passageiros      |
+| perfil           |
+| saida            |
+| usuario          |
+| usuario_perfil   |
++------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [marina]>

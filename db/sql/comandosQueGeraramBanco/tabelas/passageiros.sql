@@ -1,0 +1,8 @@
+CREATE TABLE passageiros(
+id INT AUTO_INCREMENT PRIMARY KEY,
+id_saida int,
+ nome VARCHAR(120) NOT NULL,
+rg VARCHAR(12) NOT NULL  
+ );
+ 
+ 

@@ -1,0 +1,1 @@
+ALTER TABLE passageiros ADD  FOREIGN KEY (id_saida) REFERENCES saida (id) ;

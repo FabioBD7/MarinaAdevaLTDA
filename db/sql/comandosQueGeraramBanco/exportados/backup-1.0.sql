@@ -27,14 +27,12 @@ CREATE TABLE `embarcacao` (
   `dono` int(11) NOT NULL,
   `nome` varchar(120) DEFAULT NULL,
   `modelo` varchar(75) NOT NULL,
-  `tipo` enum('Lancha','Veleiro','Escuna','Pesqueiro','Trawler','Catamar├ú','Iate','Jet-Ski','Jet Boat','Caiaque','Caiaque','Prancha de surf/windsurf','outro') NOT NULL DEFAULT 'outro',
+  `tipo` enum('Lancha','Veleiro','Escuna','Pesqueiro','Trawler','CatamarÔö£├║','Iate','Jet-Ski','Jet Boat','Caiaque','Caiaque','Prancha de surf/windsurf','outro') NOT NULL DEFAULT 'outro',
   `tamanho` int(3) NOT NULL,
-  `num_passageiros` int(2) DEFAULT NULL,
-  `capacidade_tanque` int(4) DEFAULT NULL,
   `observacao` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `dono` (`dono`),
-  CONSTRAINT `embarcacao_ibfk_1` FOREIGN KEY (`dono`) REFERENCES `usuario` (`id`)
+  CONSTRAINT `embarcacao_ibfk_1` FOREIGN KEY (`dono`) REFERENCES `usuario` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -56,18 +54,14 @@ DROP TABLE IF EXISTS `manutencao`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `manutencao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `barco` int(11) NOT NULL,
   `mecanico` int(11) NOT NULL,
-  `tipo` enum('de saida','rotina','avaria') DEFAULT NULL,
+  `tipo` enum('prÔö£┬«-saida','rotina','avaria') DEFAULT NULL,
   `data` date NOT NULL,
   `obs` varchar(500) DEFAULT NULL,
-  `pecas` decimal(7,2) DEFAULT NULL,
-  `maodeobra` decimal(7,2) NOT NULL,
+  `preco` decimal(7,2) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `mecanico` (`mecanico`),
-  KEY `barco` (`barco`),
-  CONSTRAINT `manutencao_ibfk_1` FOREIGN KEY (`mecanico`) REFERENCES `usuario` (`id`),
-  CONSTRAINT `manutencao_ibfk_2` FOREIGN KEY (`barco`) REFERENCES `embarcacao` (`id`)
+  CONSTRAINT `manutencao_ibfk_1` FOREIGN KEY (`mecanico`) REFERENCES `usuario` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -78,33 +72,6 @@ CREATE TABLE `manutencao` (
 LOCK TABLES `manutencao` WRITE;
 /*!40000 ALTER TABLE `manutencao` DISABLE KEYS */;
 /*!40000 ALTER TABLE `manutencao` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `passageiros`
---
-
-DROP TABLE IF EXISTS `passageiros`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `passageiros` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_saida` int(11) DEFAULT NULL,
-  `nome` varchar(120) NOT NULL,
-  `rg` varchar(12) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_saida` (`id_saida`),
-  CONSTRAINT `passageiros_ibfk_1` FOREIGN KEY (`id_saida`) REFERENCES `saida` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `passageiros`
---
-
-LOCK TABLES `passageiros` WRITE;
-/*!40000 ALTER TABLE `passageiros` DISABLE KEYS */;
-/*!40000 ALTER TABLE `passageiros` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -142,12 +109,11 @@ CREATE TABLE `saida` (
   `barco` int(11) NOT NULL,
   `saida` datetime NOT NULL,
   `retorno` datetime DEFAULT NULL,
-  `nivel_combustivel` int(4) DEFAULT NULL,
   `obs` varchar(500) DEFAULT NULL,
   `preco` decimal(7,2) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `barco` (`barco`),
-  CONSTRAINT `saida_ibfk_1` FOREIGN KEY (`barco`) REFERENCES `embarcacao` (`id`)
+  CONSTRAINT `saida_ibfk_1` FOREIGN KEY (`barco`) REFERENCES `embarcacao` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -197,8 +163,8 @@ CREATE TABLE `usuario_perfil` (
   `perfilID` int(11) NOT NULL,
   PRIMARY KEY (`usuarioID`,`perfilID`),
   KEY `perfilID` (`perfilID`),
-  CONSTRAINT `usuario_perfil_ibfk_1` FOREIGN KEY (`usuarioID`) REFERENCES `usuario` (`id`),
-  CONSTRAINT `usuario_perfil_ibfk_2` FOREIGN KEY (`perfilID`) REFERENCES `perfil` (`id`)
+  CONSTRAINT `usuario_perfil_ibfk_1` FOREIGN KEY (`usuarioID`) REFERENCES `usuario` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `usuario_perfil_ibfk_2` FOREIGN KEY (`perfilID`) REFERENCES `perfil` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -220,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-07 16:40:17
+-- Dump completed on 2020-01-06 18:02:51

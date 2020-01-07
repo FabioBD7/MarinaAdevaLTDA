@@ -29,4 +29,6 @@ depois nome de usuário
 en seguida senha após  uma mensagem que referencia o ssh
 prontjo !
 ###
+para sincronizar com o servidor 
+git pull
 
