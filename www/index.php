@@ -28,7 +28,7 @@
 <h1 id="conteudo">Página Inicial</h1>
 <p>Seja bem vindo ao portal online da Marina ADEVA LTDA!</p>
 <h2>Faça seu Login</h2>
-form>
+<form>
 <div class="form-group">
 <label for="usuario">Informe seu nome de usuário</label>
 <input name="usuario" id="usuario" type="text" class="form-control" />

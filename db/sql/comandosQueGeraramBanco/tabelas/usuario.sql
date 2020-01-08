@@ -4,4 +4,4 @@ nome VARCHAR(120) NOT NULL,
 email VARCHAR(75) NOT NULL,
 status ENUM('A','I') NOT NULL DEFAULT 'A',
 PRIMARY KEY (id)
-)
+);

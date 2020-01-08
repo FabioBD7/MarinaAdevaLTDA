@@ -5,4 +5,3 @@ id_saida int,
 rg VARCHAR(12) NOT NULL  
  );
  
- 
