@@ -1,0 +1,12 @@
+passos para importar o banco
+entre no mariadb:
+mysql -u root
+crie o banco 
+CREATE DATABASE marina;
+abra  O DATABASE criado:
+USE marina;
+
+importe co o comando:
+source /xampp/htdocs/MarinaAdevaLTDA/db/backup.sql;
+
+caso o banco já exista apague e crie de novo 
