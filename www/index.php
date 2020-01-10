@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php session_start(); ?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
@@ -18,25 +19,28 @@
 
 
 </nav>
-<form role="search">
-<label for="p">Pesquisa</label>
-<input type="search" name="p" id="p" />
-<button type="submit">Pesquisar</button>
-</form>
+
 </header>
 <main>
 <h1 id="conteudo">Página Inicial</h1>
 <p>Seja bem vindo ao portal online da Marina ADEVA LTDA!</p>
 <h2>Faça seu Login</h2>
-<form>
+<form action="valida.php" method="post" >
 <div class="form-group">
-<label for="usuario">Informe seu nome de usuário</label>
-<input name="usuario" id="usuario" type="text" class="form-control" />
+<label for="email">E-mail:</label>
+<input name="email" id="email" type="email" class="form-control" />
 </div>
 <div class="form-group">
-<button type="button" id="b" class="btn btn-primary">Entrar</button>
+<label for="senha">Entre com sua senha:</label>
+<input name="senha" id="senha" type="password" class="form-control" />
+</div>
+<button type="submit" id="b" class="btn btn-primary">Entrar</button>
 </form>
-<a href="usuarioformulario.php">cadastre-se</a>
+<p id="s" aria-live="assertive">
+ <?php echo "$_SESSION[errologin]";  ?>
+ </p>
+
+<a href="usuarioformulario.php">Cadastre-se</a>
 </main>
 <footer id="rodape">
 <address>
@@ -49,6 +53,7 @@
 <script src="js/jquery-3.4.1.js" ></script>
 <script src="js/bootstrap.bundle.min.js" ></script>
 <script src="js/functions.js" ></script>
+
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -15,7 +16,7 @@
 
 </header>
 <?php  
-include 'secretario.php';
+
 
 ?>
 <!-- arquivos js importantes -->

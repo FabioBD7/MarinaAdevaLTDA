@@ -16,6 +16,7 @@
 </div>
 <div class="col-8">
 <h1 class="display-1">
+<?php echo $_SESSION['nome']; ?>
 </h1>
 </div>
 </div>
