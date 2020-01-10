@@ -36,6 +36,7 @@
 <div class="form-group">
 <button type="button" id="b" class="btn btn-primary">Entrar</button>
 </form>
+<a href="usuarioformulario.php">cadastre-se</a>
 </main>
 <footer id="rodape">
 <address>
