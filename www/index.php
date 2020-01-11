@@ -38,10 +38,10 @@
 </form>
 <p id="s" aria-live="assertive">
  <?php
- if(isset($_SESSION['errologin']))
+ if(isset($_SESSION['errologin'])){
  echo "$_SESSION[errologin]";
  unset($_SESSION['errologin']);
- 
+ }
  ?>
  </p>
 
