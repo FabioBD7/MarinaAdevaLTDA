@@ -1,0 +1,1 @@
+INSERT INTO perfil (perfil) VALUE('cliente'),('secretario'),('pratico'),('mecanico');

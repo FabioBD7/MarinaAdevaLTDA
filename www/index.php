@@ -37,7 +37,12 @@
 <button type="submit" id="b" class="btn btn-primary">Entrar</button>
 </form>
 <p id="s" aria-live="assertive">
- <?php echo "$_SESSION[errologin]";  ?>
+ <?php
+ if(isset($_SESSION['errologin']))
+ echo "$_SESSION[errologin]";
+ unset($_SESSION['errologin']);
+ 
+ ?>
  </p>
 
 <a href="usuarioformulario.php">Cadastre-se</a>
