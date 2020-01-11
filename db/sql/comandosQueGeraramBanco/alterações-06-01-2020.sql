@@ -1,3 +1,8 @@
+//
+//remover tabela usuario_perfil
+//adicionar campo perfil na tabela usuario
+ALTER TABLE usuario ADD COLUMN perfil INT(1) DEFAULT 1;
+
 //quinta-feira, 9 de janeiro de 2020
 //campo SENHA , tel  e data_inscricao na tabela usuario
 ALTER TABLE usuario ADD COLUMN senha VARCHAR(32) NOT NULL;
