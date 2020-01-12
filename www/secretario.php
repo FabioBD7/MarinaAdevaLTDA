@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php session_start();
+if($_SESSION['perfil'] != 2) {header("location: index.php");}
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
@@ -14,10 +17,34 @@
 <a href="#conteudo" accesskey="2">Ir para o conteudo</a>
 <a href="#rodape" accesskey="3">Ir para o Rodapé</a>
 <img src="logotipo.jpg" alt="logotipo da Marina ADEVA LTDA" />
-<nav id="menu">
 
-<?php include 'topbar.php'; ?>
+
+
+<div class="row">
+<div class="col-4">
+<nav>
+<ul class="list-unstyled"">
+
+<li><a href="">link</a></li>
+<li><a href="">link</a></li>
+<li><a href="">link</a></li>
+<li><a href=""></a>link</li>
+<li><a href="">link</a></li>
+<li><a href="index.php">Sair</a></li>
+ 
+</ul>
 </nav>
+</div>
+<div class="col-8">
+<h1 class="display-1">
+<?php echo $_SESSION['nome']; ?>
+</h1>
+</div>
+</div>
+
+
+
+
 <form role="search">
 <label for="p">Pesquisa</label>
 <input type="search" name="p" id="p" />
