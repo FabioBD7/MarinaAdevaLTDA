@@ -1,4 +1,4 @@
-﻿<?php session_start(); ?>
+﻿<? session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,13 +38,12 @@
 </form>
 <p id="s" aria-live="assertive">
  <?php
- if(isset($_SESSION['errologin'])){
- echo "$_SESSION[errologin]";
- unset($_SESSION['errologin']);
- }
- ?>
- </p>
-
+if(isset($_SESSION['errologin'])){
+	echo "$_SESSION[errologin]";
+	unset($_SESSION['errologin']);
+	}
+?>
+</p>
 <a href="usuarioformulario.php">Cadastre-se</a>
 </main>
 <footer id="rodape">

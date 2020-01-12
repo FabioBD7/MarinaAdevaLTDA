@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?session_start();?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
@@ -16,7 +17,8 @@
 <img src="logotipo.jpg" alt="logotipo da Marina ADEVA LTDA" />
 <nav id="menu">
 
-<?php include 'topbar.php'; ?>
+
+
 </nav>
 <form role="search">
 <label for="p">Pesquisa</label>
