@@ -1,6 +1,6 @@
 ﻿<?php session_start();
 if($_SESSION['perfil'] != 1) {header("location: index.php");}
-
+include_once 'banco.php';  
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,8 +24,8 @@ if($_SESSION['perfil'] != 1) {header("location: index.php");}
 <nav>
 <ul class="list-unstyled"">
 
-<li><a href="">link</a></li>
-<li><a href="">link</a></li>
+<li><a href="formBarco.php">Cadatre sua embarcação</a></li>
+<li><a href="formSaida.php">Agende uma saída</a></li>
 <li><a href="">link</a></li>
 <li><a href=""></a>link</li>
 <li><a href="">link</a></li>
@@ -52,7 +52,24 @@ if($_SESSION['perfil'] != 1) {header("location: index.php");}
 <main>
 <h1 id="conteudo">Serviços para Você</h1>
 <p>Gerencie suas embarcações</p>
+<form method="post" action="formBarco.php" >
+<?php
+$tabela = $banco->query("SELECT * FROM embarcacao ; ");
 
+echo "<div>
+<label for='barco'>Selecione a embarcação:</label>
+<select name='barco' id='barco'  >
+";
+while($item = $tabela->fetch_assoc() ){
+    echo "<option value='$item[id]'>$item[nome]</option>";
+}
+
+echo "</select>
+    </div>";
+?>
+
+<button type="submit"  id="b"  class="btn btn-primary">Cadastra embarcação</button> 
+</form>
 
 </main>
 <footer id="rodape">

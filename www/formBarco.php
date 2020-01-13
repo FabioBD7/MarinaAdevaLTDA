@@ -11,7 +11,7 @@
   <body>
 <h1>Cadastre sua embarcação</h1>
 <p id="s" aria-live="assertive">
-<form>
+<form action="cadastraBarco.php" method="post" >
 <div class="form-group">
 <label for="nome">Nome:</label>
 <input name="nome" id="nome" type="text" class="form-control" />
@@ -56,11 +56,8 @@
 <label for="observacao">Observações</label>
 <textarea name="observacao" id="observacao" type="text" class="form-control" ></textarea>
 </div>
-<div class="form-group">
-<label for="n1">data</label>
-<input name="n1" id="n1" type="date" class="form-control" />
-</div>
-<button type="button" id="b" class="btn btn-primary">Executar</button>
+
+<button type="submit" id="b" class="btn btn-primary">Cadastre!</button>
 </form>
 
     
