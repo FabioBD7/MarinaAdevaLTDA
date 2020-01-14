@@ -26,14 +26,14 @@
 <li><a href="">link</a></li>
 <li><a href=""></a>link</li>
 <li><a href="">link</a></li>
-<li><a href="index.php">Sair</a></li>
+<li><a href="sair.php">Sair</a></li>
  
 </ul>
 </nav>
 </div>
 <div class="col-8">
 <h1 class="display-1">
-Bem vindo <?php echo $_SESSION['nome'];?>!
+Bem vindo <?php if(isset($_SESSION['nome'])) {echo $_SESSION['nome'];}?>!
 </h1>
 </div>
 </div>

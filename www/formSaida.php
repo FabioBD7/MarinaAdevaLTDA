@@ -33,8 +33,8 @@ echo "</select>
 ?>
 <div class="form-group">
 <fieldset>
-<legend>Agendamento saída</legend>
-<label for="saidadata">Data:</label>
+<legend>Agendamento saída </legend>
+<label for="saidadata">Data (obrigatório):</label>
 <input name="saidadata" id="saidadata" type="date" class="form-control" />
 
 <label for="saidahora">Hora:</label>
@@ -53,19 +53,12 @@ echo "</select>
 </fieldset>
 </div>
 <div class="form-group">
-<label for="nivel_combustivel">Nível do combustivel:</label>
-<input name="nivel_combustivel" id="nivel_combustivel" type="number" class="form-control" />
-</div>
-<div class="form-group">
 <label for="observacao">Observações</label>
 <textarea name="observacao" id="observacao" type="text" class="form-control" ></textarea>
 </div>
 
-<div class="form-group">
-<label for="preco">preço:</label>
-<input name="preco" id="preco" type="text" class="form-control" />
-</div>
-<button type="submit"  id="b"  class="btn btn-primary">Agenda saída</button> 
+
+<button type="submit"  id="b"  class="btn btn-primary">Agendar saída</button> 
 </form>
 
 

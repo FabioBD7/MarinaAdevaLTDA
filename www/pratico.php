@@ -30,7 +30,7 @@ if($_SESSION['perfil'] != 3) {header("location: index.php");}
 <li><a href="">link</a></li>
 <li><a href=""></a>link</li>
 <li><a href="">link</a></li>
-<li><a href="index.php">Sair</a></li>
+<li><a href="sair.php">Sair</a></li>
  
 </ul>
 </nav>

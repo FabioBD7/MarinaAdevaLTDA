@@ -1,6 +1,9 @@
 <?php   
 session_start();
-if($_SESSION['perfil'] != 1) {header("location: index.php");}
+
 include_once 'banco.php';
 
 print_r($_POST);
+$data= $_POST['saidadata'] . ' ' . $_POST['saidahora'] ;
+echo " <br /> $data";
+$banco->query("INSERT INTO saida (barco, saida, obs) VALUE ('$_POST[barco]', '$data', '$_POST');");

@@ -1,5 +1,6 @@
 ﻿<?php session_start();
 if($_SESSION['perfil'] != 2) {header("location: index.php");}
+include 'banco.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +31,7 @@ if($_SESSION['perfil'] != 2) {header("location: index.php");}
 <li><a href="">link</a></li>
 <li><a href=""></a>link</li>
 <li><a href="">link</a></li>
-<li><a href="index.php">Sair</a></li>
+<li><a href="sair.php">Sair</a></li>
  
 </ul>
 </nav>
@@ -55,6 +56,7 @@ if($_SESSION['perfil'] != 2) {header("location: index.php");}
 <h1 id="conteudo">Catálogo de Embarcações</h1>
 <p>Consulte/gerencie o catálogo de embarcaçõesda Marina ADEVA LTDA!</p>
 
+<?php Lista("select * from embarcacao ") ?>
 
 </main>
 <footer id="rodape">
