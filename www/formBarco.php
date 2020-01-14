@@ -1,3 +1,7 @@
+<?php session_start();
+if($_SESSION['perfil'] != 1) {header("location: index.php");}
+include_once 'banco.php';  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -8,8 +12,43 @@
 <link rel="stylesheet" href="css/style.css" />
     <title>cadastra embarcação</title>
   </head>
-  <body>
-<h1>Cadastre sua embarcação</h1>
+  <header>
+<a href="#menu" accesskey="1">Ir para o menu</a>
+<a href="#conteudo" accesskey="2">Ir para o conteudo</a>
+<a href="#rodape" accesskey="3">Ir para o Rodapé</a>
+<img src="logotipo.jpg" alt="logotipo da Marina ADEVA LTDA" />
+
+<div class="row">
+<div class="col-4">
+<nav>
+<ul class="list-unstyled"">
+
+<li><a href="formBarco.php">Cadastre sua embarcação</a></li>
+<li><a href="formSaida.php">Agende uma saída</a></li>
+<li><a href="">link</a></li>
+<li><a href=""></a>link</li>
+<li><a href="">link</a></li>
+<li><a href="index.php">Sair</a></li>
+ 
+</ul>
+</nav>
+</div>
+<div class="col-8">
+<h1 class="display-1">
+Cadastre ~suas embarcações <?php echo $_SESSION['nome'];?>!
+</h1>
+</div>
+</div>
+
+<form role="search">
+<label for="p">Pesquisa</label>
+<input type="search" name="p" id="p" />
+<button type="submit">Pesquisar</button>
+</form>
+</header>
+
+<body>
+<h2>Cadastro de Embarcações</h2>
 <p id="s" aria-live="assertive">
 <form action="cadastraBarco.php" method="post" >
 <div class="form-group">
@@ -60,13 +99,19 @@
 <button type="submit" id="b" class="btn btn-primary">Cadastre!</button>
 </form>
 
-    
+<footer id="rodape">
+<address>
+Marina ADEVA LTDA<br />
+Alameda Vilarejo, 99, Jardim Arpuador, Navegantes - SP.<br />
+Tel.: (13) 4444-5555<br />
+<a href="#topo" accesskey="0">Ir para o topo"</a>
+</address>
+</footer>
+
 <!-- arquivos js importantes -->
     <script src="js/jquery-3.4.1.js" ></script>
     <script src="js/bootstrap.bundle.min.js" ></script>
         <script src="js/functions.js" ></script>
-        <script>
-        
-        </script>
-  </body>
+
+</body>
 </html>

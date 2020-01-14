@@ -15,12 +15,36 @@
 <a href="#conteudo" accesskey="2">Ir para o conteudo</a>
 <a href="#rodape" accesskey="3">Ir para o Rodapé</a>
 <img src="logotipo.jpg" alt="logotipo da Marina ADEVA LTDA" />
-<nav id="menu">
 
+<div class="row">
+<div class="col-4">
+<nav>
+<ul class="list-unstyled"">
 
+<li><a href="formBarco.php">Cadastre sua embarcação</a></li>
+<li><a href="formSaida.php">Agende uma saída</a></li>
+<li><a href="">link</a></li>
+<li><a href=""></a>link</li>
+<li><a href="">link</a></li>
+<li><a href="index.php">Sair</a></li>
+ 
+</ul>
 </nav>
+</div>
+<div class="col-8">
+<h1 class="display-1">
+Bem vindo <?php echo $_SESSION['nome'];?>!
+</h1>
+</div>
+</div>
 
+<form role="search">
+<label for="p">Pesquisa</label>
+<input type="search" name="p" id="p" />
+<button type="submit">Pesquisar</button>
+</form>
 </header>
+
 <main>
 <h1 id="conteudo">Página Inicial</h1>
 <p>Seja bem vindo ao portal online da Marina ADEVA LTDA!</p>
@@ -46,10 +70,13 @@ if(isset($_SESSION['errologin'])){
 </p>
 <a href="usuarioformulario.php">Cadastre-se</a>
 </main>
+
 <footer id="rodape">
 <address>
-
-
+Marina ADEVA LTDA<br />
+Alameda Vilarejo, 99, Jardim Arpuador, Navegantes - SP.<br />
+Tel.: (13) 4444-5555<br />
+<a href="#topo" accesskey="0">Ir para o topo"</a>
 </address>
 </footer>
 
@@ -57,7 +84,6 @@ if(isset($_SESSION['errologin'])){
 <script src="js/jquery-3.4.1.js" ></script>
 <script src="js/bootstrap.bundle.min.js" ></script>
 <script src="js/functions.js" ></script>
-
 
 </body>
 </html>

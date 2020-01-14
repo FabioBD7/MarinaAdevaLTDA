@@ -10,7 +10,7 @@ include_once 'banco.php';
 
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
-<title>Perfil cliente!</title>
+<title>Portaldo  Cliente!</title>
 </head>
 <body>
 <header>
@@ -24,7 +24,7 @@ include_once 'banco.php';
 <nav>
 <ul class="list-unstyled"">
 
-<li><a href="formBarco.php">Cadatre sua embarcação</a></li>
+<li><a href="formBarco.php">Cadastre sua embarcação</a></li>
 <li><a href="formSaida.php">Agende uma saída</a></li>
 <li><a href="">link</a></li>
 <li><a href=""></a>link</li>
@@ -36,12 +36,10 @@ include_once 'banco.php';
 </div>
 <div class="col-8">
 <h1 class="display-1">
-<?php echo $_SESSION['nome']; ?>
+Bem vindo <?php echo $_SESSION['nome'];?>!
 </h1>
 </div>
 </div>
-
-
 
 <form role="search">
 <label for="p">Pesquisa</label>
@@ -49,6 +47,7 @@ include_once 'banco.php';
 <button type="submit">Pesquisar</button>
 </form>
 </header>
+
 <main>
 <h1 id="conteudo">Serviços para Você</h1>
 <p>Gerencie suas embarcações</p>
@@ -72,10 +71,13 @@ echo "</select>
 </form>
 
 </main>
+
 <footer id="rodape">
 <address>
-
-
+Marina ADEVA LTDA<br />
+Alameda Vilarejo, 99, Jardim Arpuador, Navegantes - SP.<br />
+Tel.: (13) 4444-5555<br />
+<a href="#topo" accesskey="0">Ir para o topo"</a>
 </address>
 </footer>
 
