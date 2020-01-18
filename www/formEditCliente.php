@@ -2,7 +2,7 @@
 session_start();
 include_once 'banco.php';
 $perfil = $banco->query("SELECT * FROM perfil ; ");
-$usuario = $banco->query("SELECT * FROM usuario where id = 1 ; ");
+$usuario = $banco->query("SELECT * FROM usuario where id = '$_POST[usu]';");
 //print_r($usuario);
 while ($campo = $usuario->fetch_assoc()){
     
@@ -23,10 +23,16 @@ while ($campo = $usuario->fetch_assoc()){
   <body>
 <h1>Editar usuário</h1>
 <p id="s" aria-live="assertive">
-<form>
+<form action="cadastraEditaCliente.php" method="post" >
+
+<div class="form-group">
+<label for="id">id:</label>
+<input name="id" id="id" type="text" class="form-control" value="<?php echo "$campo[id]"; ?>" readonly="readonly" />
+</div>
+
 <div class="form-group">
 <label for="nome">Nome:</label>
-<input name="nome" id="nome" type="text" class="form-control" value="<?php echo "$campo[nome]"; ?>" />
+<input name="nome" id="nome" type="text" class="form-control" value="<?php echo "$campo[nome]"; ?>" readonly="readonly" />
 </div>
 <div class="form-group">
 <label for="email">E-mail:</label>
@@ -53,7 +59,7 @@ echo "</select>
 
 ?>
 
-<button type="button" id="b" class="btn btn-primary">Executar</button>
+<button type="submit" id="b" class="btn btn-primary">Executar</button>
 </form>
 
     

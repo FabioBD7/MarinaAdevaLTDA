@@ -26,7 +26,7 @@ include 'banco.php';
 <nav>
 <ul class="list-unstyled"">
 
-<li><a href="">link</a></li>
+<li><a href="editaPerfil.php">edita perfil do usuário</a></li>
 <li><a href="">link</a></li>
 <li><a href="">link</a></li>
 <li><a href=""></a>link</li>
@@ -55,8 +55,11 @@ include 'banco.php';
 <main>
 <h1 id="conteudo">Catálogo de Embarcações</h1>
 <p>Consulte/gerencie o catálogo de embarcaçõesda Marina ADEVA LTDA!</p>
-
-<?php Lista("select * from embarcacao ") ?>
+<h2>Lista de usuários do sistema</h2>
+<?php 
+$tabela = $banco->query("select nome, email, perfil  from usuario;");
+echo listaBanco($tabela);
+?>
 
 </main>
 <footer id="rodape">
