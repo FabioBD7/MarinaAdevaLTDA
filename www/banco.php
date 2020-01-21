@@ -1,6 +1,6 @@
 <?php
-$banco = new mysqli ("localhost","root","","marina");
-
+//$banco = new mysqli ("localhost","root","","");
+$banco = new mysqli ("alzeinclusiva.com","alze_marina","marina2020","alze_marina");
 function listaBanco($tabela ) {
     
     
