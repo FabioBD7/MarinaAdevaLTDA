@@ -53,7 +53,7 @@ Bem vindo <?php echo $_SESSION['nome'];?>!
 <p>Gerencie suas embarcações</p>
 <form method="post" action="formBarco.php" >
 <?php
-$tabela = $banco->query("SELECT * FROM embarcacao ; ");
+$tabela = $banco->query("SELECT * FROM embarcacao where dono = $_SESSION[id] ; ");
 
 echo "<div>
 <label for='barco'>Selecione a embarcação:</label>

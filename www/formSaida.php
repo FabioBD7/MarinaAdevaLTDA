@@ -18,7 +18,7 @@ include_once 'banco.php';
 
 <form method="post" action="cadastraSaida.php" >
 <?php
-$tabela = $banco->query("SELECT * FROM embarcacao ; ");
+$tabela = $banco->query("SELECT * FROM embarcacao where dono = $_SESSION[id] ; ");
 
 echo "<div>
 <label for='barco'>Selecione a embarca��o:</label>
