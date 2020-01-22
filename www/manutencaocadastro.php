@@ -4,5 +4,5 @@ include 'banco.php';
 print_r ($_POST);
 
 //insert no banco
-$banco->query("INSERT INTO manutencao(tipo) VALUE ('$_POST[tipo]')");
+//$banco->query("INSERT INTO manutencao(tipo) VALUE ('$_POST[tipo]')");
 ?>
